@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ProyectoAnime/jikan_api.dart';
 
 void main() {
   runApp(MyApp());
