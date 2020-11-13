@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ProyectoAnime/jikan_api.dart';
+// import 'package:ProyectoAnime/jikan_api.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,11 +25,11 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Image.asset("assets/iconologo.png", height: 50,),
+        title: Image.asset(
+          "assets/iconologo.png",
+          height: 50,
+        ),
       ),
     );
   }
 }
-
-// soy un cambio by me //
-//Hola mundo world//
