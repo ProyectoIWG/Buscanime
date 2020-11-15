@@ -27,9 +27,28 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.black,
         title: Image.asset(
           "assets/iconologo.png",
-          height: 50,
-        ),
+           height: 50,
+           ),
       ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Text(
+              "Top 10 Mejores",
+               style: TextStyle(
+                color: Colors.red,
+                fontSize: 20.0,
+            ),
+          ),
+         ),
+        ],
+      ),
+
     );
   }
 }
+
+// soy un cambio by me //
+//Hola mundo world//
