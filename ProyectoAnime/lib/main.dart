@@ -5,6 +5,7 @@ void main() {
   runApp(MyApp());
 }
 
+// todo esto es necesario para que inicie la app
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
