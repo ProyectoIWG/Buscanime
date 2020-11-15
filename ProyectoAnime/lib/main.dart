@@ -1,3 +1,4 @@
+import 'package:ProyectoAnime/paginas/pagina_principal.dart';
 import 'package:flutter/material.dart';
 // import 'package:ProyectoAnime/jikan_api.dart';
 
@@ -15,22 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Image.asset(
-          "assets/iconologo.png",
-          height: 50,
-        ),
-      ),
+      home: PaginaPrincipal(),
+      //el nombre del identificador en el archivo en que se diseña la pagina
     );
   }
 }

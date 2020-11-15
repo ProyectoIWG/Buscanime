@@ -8,6 +8,19 @@ class PaginaPrincipal extends StatefulWidget {
 class _PaginaPrincipalState extends State<PaginaPrincipal> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    //zona en donde se comienza a definir o crear la pagina
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Experimento'),
+      ),
+      body: Container(
+        child: ListView.builder(itemBuilder: (context, index) {
+          return Container(
+            height: 100,
+            color: Colors.red,
+          );
+        }),
+      ),
+    );
   }
 }
