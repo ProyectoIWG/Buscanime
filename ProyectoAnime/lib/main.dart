@@ -31,7 +31,6 @@ class MyHomePage extends StatelessWidget {
            ),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(12.0),
@@ -43,9 +42,32 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
          ),
-        ],
+         DefaultTabController(
+           length: 2,
+                child: TabBar(
+                  tabs: [
+                    Tab(
+                      child: Text(
+                        "Anime",
+                        style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20.0,
+            ),
+          ),
+           ),
+             Tab(
+            child: Text(
+              "Manga",
+               style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+            ),
+          ),
+           ),
+         ],)
+             ), 
+            ],  
       ),
-
     );
   }
 }
