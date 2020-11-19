@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:ProyectoAnime/jikan_api.dart';
+import 'package:ProyectoAnime/functions/functions.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +19,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  MyHomePageStatus createState() => MyHomePageStatus();
+}
+
+class MyHomePageStatus extends State<MyHomePage> {
+  var busqueda;
+  var nombre;
+  int result;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +41,17 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
+          TextField(
+            decoration: InputDecoration(
+                hintText: "Busca un anime", icon: Icon(Icons.search)),
+            onSubmitted: (String str) async {
+              setState(() {
+                id(str).then((value) {
+                  result = value;
+                });
+              });
+            },
+          ),
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Text(
@@ -68,9 +88,11 @@ class MyHomePage extends StatelessWidget {
               )),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          print(result);
+        },
+      ),
     );
   }
 }
-
-// soy un cambio by me //
-//Hola mundo world//
